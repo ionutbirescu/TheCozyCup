@@ -13,6 +13,7 @@ namespace TheCozyCup
         public decimal FinalTotal { get; set; }
         public Dictionary<string, int> ItemsSold { get; set; }
 
+        public SalesLogEntry() { }
         // Stores the items sold as a dictionary: Key=ItemName, Value=Quantity
         public SalesLogEntry(Order order)
         {

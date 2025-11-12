@@ -30,11 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             FinalizeSale = new Button();
-            NewOrder = new Button();
+            BestSellers = new Button();
             Discount = new Button();
             Reports = new Button();
             MenuButtons = new Panel();
-            OrderItems = new Label();
             Total = new Label();
             flowLayoutPanel1 = new FlowLayoutPanel();
             listView1 = new ListView();
@@ -55,15 +54,16 @@
             FinalizeSale.UseVisualStyleBackColor = true;
             FinalizeSale.Click += FinalizeSale_Click;
             // 
-            // NewOrder
+            // BestSellers
             // 
-            NewOrder.Location = new Point(74, 220);
-            NewOrder.Margin = new Padding(4);
-            NewOrder.Name = "NewOrder";
-            NewOrder.Size = new Size(242, 36);
-            NewOrder.TabIndex = 1;
-            NewOrder.Text = "NEW ORDER";
-            NewOrder.UseVisualStyleBackColor = true;
+            BestSellers.Location = new Point(74, 220);
+            BestSellers.Margin = new Padding(4);
+            BestSellers.Name = "BestSellers";
+            BestSellers.Size = new Size(242, 36);
+            BestSellers.TabIndex = 1;
+            BestSellers.Text = "BEST SELLERS";
+            BestSellers.UseVisualStyleBackColor = true;
+            BestSellers.Click += BestSellers_Click;
             // 
             // Discount
             // 
@@ -85,12 +85,13 @@
             Reports.TabIndex = 3;
             Reports.Text = "REPORTS";
             Reports.UseVisualStyleBackColor = true;
+            Reports.Click += Reports_Click;
             // 
             // MenuButtons
             // 
             MenuButtons.Controls.Add(Reports);
             MenuButtons.Controls.Add(Discount);
-            MenuButtons.Controls.Add(NewOrder);
+            MenuButtons.Controls.Add(BestSellers);
             MenuButtons.Controls.Add(FinalizeSale);
             MenuButtons.Location = new Point(1159, 268);
             MenuButtons.Margin = new Padding(4);
@@ -98,16 +99,6 @@
             MenuButtons.Size = new Size(449, 374);
             MenuButtons.TabIndex = 7;
             MenuButtons.Paint += MenuButtons_Paint;
-            // 
-            // OrderItems
-            // 
-            OrderItems.AutoSize = true;
-            OrderItems.Location = new Point(122, 49);
-            OrderItems.Margin = new Padding(4, 0, 4, 0);
-            OrderItems.Name = "OrderItems";
-            OrderItems.Size = new Size(107, 25);
-            OrderItems.TabIndex = 5;
-            OrderItems.Text = "Order Items";
             // 
             // Total
             // 
@@ -160,13 +151,12 @@
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
-            ClientSize = new Size(1955, 1222);
+            ClientSize = new Size(1924, 1170);
             Controls.Add(textBox1);
             Controls.Add(label1);
             Controls.Add(listView1);
             Controls.Add(flowLayoutPanel1);
             Controls.Add(MenuButtons);
-            Controls.Add(OrderItems);
             Controls.Add(Total);
             Margin = new Padding(4);
             Name = "Form1";
@@ -180,11 +170,10 @@
         #endregion
 
         private Button FinalizeSale;
-        private Button NewOrder;
+        private Button BestSellers;
         private Button Discount;
         private Button Reports;
         private Panel MenuButtons;
-        private Label OrderItems;
         private Label Total;
         private FlowLayoutPanel flowLayoutPanel1;
         private ListView listView1;

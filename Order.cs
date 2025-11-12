@@ -116,7 +116,11 @@ namespace TheCozyCup
         public decimal CalculateFinalTotal()
         {
             decimal subTotal = GetSubTotal();
-            decimal discountAmount = subTotal * (DiscountPercentage / 100);
+
+            decimal discountRate = DiscountPercentage / 100m;
+
+            decimal discountAmount = subTotal * discountRate;
+
             return subTotal - discountAmount;
         }
 
@@ -152,6 +156,6 @@ namespace TheCozyCup
             decimal newTotal = CalculateFinalTotal();
             OrderUpdated?.Invoke(this, newTotal);
         }
-
+        
     }
 }

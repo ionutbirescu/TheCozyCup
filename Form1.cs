@@ -1,4 +1,6 @@
 ﻿using Microsoft.VisualBasic;
+using System.Text;
+using System.Threading.Tasks;
 namespace TheCozyCup
 {
     public partial class Form1 : Form
@@ -50,10 +52,10 @@ namespace TheCozyCup
             textBox1.Text = newTotal.ToString("C");
         }
 
-        private void FinalizeSale_Click(object sender, EventArgs e)
+        private async void FinalizeSale_Click(object sender, EventArgs e)
         {
             // Safety check: ensure we actually have items in the order before finalizing
-            if (_currentOrder == null || _currentOrder.lineItems.Count == 0)
+            if (!_currentOrder.lineItems.Any())
             {
                 MessageBox.Show("Cannot finalize an empty order.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -61,29 +63,24 @@ namespace TheCozyCup
 
             try
             {
-                // 1. Call the business logic method
                 _currentOrder.FinalizeOrder();
-
-                // 2. Display the confirmation and final total
+                var salesLogEntry = new SalesLogEntry(_currentOrder);
+                await FileLoggerService.Instance.AppendTransactionAsync(salesLogEntry);
                 MessageBox.Show(
                     $"Sale Finalized!\nTotal Amount Paid: {_currentOrder.FinalTotal.ToString("C")}",
                     "Transaction Complete",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Information
                 );
-
-                // 3. Reset the UI and start a new order
                 ResetOrderUI();
 
             }
             catch (InvalidOperationException ex)
             {
-                // This catches the exception from your Order class if it's already finalized
                 MessageBox.Show($"Error: {ex.Message}", "Transaction Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (Exception ex)
             {
-                // Catch any unexpected errors
                 MessageBox.Show($"An unexpected error occurred: {ex.Message}", "System Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -91,32 +88,20 @@ namespace TheCozyCup
         private void Discount_Click(object sender, EventArgs e)
         {
             string input = Microsoft.VisualBasic.Interaction.InputBox(
-                "Enter the discount percentage (0-100):", // Prompt
-                "Apply Discount",                         // Title
-                _currentOrder.DiscountPercentage.ToString() // Default value (uses current discount)
+                "Enter the discount percentage (0-100):",
+                "Apply Discount",
+                _currentOrder.DiscountPercentage.ToString()
                 );
-
-            // Check if the user clicked Cancel or didn't enter anything
             if (string.IsNullOrEmpty(input))
             {
                 return;
             }
-
-            // 1. Validate and Parse the Input
             if (decimal.TryParse(input, out decimal discountPercentage))
             {
                 try
                 {
-                    // 2. Call the ApplyDiscount method on the Order object
-                    // The method implements ITransaction.ApplyDiscount
-                    // Note: Use ITransaction interface call to match the definition, if needed, 
-                    // otherwise, simply call the public/private ApplyDiscount method.
-
-                    // Calling the explicit interface implementation using a cast:
                     ITransaction transactionOrder = _currentOrder;
                     transactionOrder.ApplyDiscount(discountPercentage);
-
-                    // 3. Update the UI to show the new breakdown
                     MessageBox.Show($"Discount of {discountPercentage}% applied successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (ArgumentOutOfRangeException ex)
@@ -158,24 +143,153 @@ namespace TheCozyCup
 
         private void ResetOrderUI()
         {
-            // A. Unsubscribe the old order's event handler (prevents memory leaks/duplicate calls)
             if (_currentOrder != null)
             {
                 _currentOrder.OrderUpdated -= OnOrderTotalUpdated;
             }
 
-            // B. Clear the visual elements
-            listView1.Items.Clear();        // Clear the items list
-            textBox1.Text = "$0.00";        // Reset the total display (assuming textBox1 is the total)
-                                            // Assuming you have a txtDiscount for input:
-                                            // txtDiscount.Text = "";        // Clear the discount input area 
+            listView1.Items.Clear();
+            textBox1.Text = "$0.00";
 
-            // C. Create a brand new order object
             _currentOrder = new Order();
-
-            // D. Subscribe the new order's event handler
             _currentOrder.OrderUpdated += OnOrderTotalUpdated;
         }
-    }
 
+        private async void Reports_Click(object sender, EventArgs e)
+        {
+            string input = Interaction.InputBox(
+                "Enter the date for the sales report (YYYY-MM-DD):",
+                "Generate Sales Report",
+                DateTime.Today.ToString("yyyy-MM-dd")
+            );
+
+            if (string.IsNullOrEmpty(input))
+            {
+                return;
+            }
+
+            if (DateTime.TryParse(input, out DateTime reportDate))
+            {
+                try
+                {
+                    DateTime startDate = reportDate.Date;
+                    DateTime endDate = reportDate.Date.AddDays(1);
+                    var allLogs = await FileLoggerService.Instance.ReadAllTransactionsAsync();
+
+                    var dailySales = allLogs
+                        .Where(log => log.saleDate >= startDate && log.saleDate <= endDate)
+                        .ToList();
+                    if (!dailySales.Any())
+                    {
+                        MessageBox.Show(
+                            $"No sales found for {reportDate:yyyy-MM-dd}.",
+                            "Report Empty",
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Information
+                        );
+                        return;
+                    }
+
+                    var report = SalesReportingService.Instance.GenerateSummary(dailySales);
+                    report.ReportDate = reportDate.Date;
+                    MessageBox.Show(
+                        report.ToString(),
+                        $"Sales Summary for {reportDate:yyyy-MM-dd}",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Information
+                    );
+                    try
+                    {
+                        string logFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "saleslog.json");
+                        if (File.Exists(logFilePath))
+                        {
+                            System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo()
+                            {
+                                FileName = logFilePath,
+                                UseShellExecute = true
+                            });
+                        }
+                        else
+                        {
+                            MessageBox.Show("The saleslog.json file was not found.", "File Not Found", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Failed to open saleslog.json: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                catch (IOException ex)
+                {
+                    MessageBox.Show($"File Error: Could not load sales data. Please ensure 'saleslog.json' exists and is not locked.\n\nDetails: {ex.Message}",
+                        "Data Access Error",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"An unexpected error occurred while generating the report: {ex.Message}",
+                        "System Error",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Invalid date format. Please use YYYY-MM-DD.",
+                    "Input Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+            }
+        }
+
+        private async void BestSellers_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var allLogs = await FileLoggerService.Instance.ReadAllTransactionsAsync();
+
+                if (allLogs == null || !allLogs.Any())
+                {
+                    MessageBox.Show("No sales data found.", "No Data", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+
+                var report = SalesReportingService.Instance.GenerateSummary(allLogs);
+
+                if (report.BestSellers == null || !report.BestSellers.Any())
+                {
+                    MessageBox.Show("No best sellers found.", "No Data", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+
+                // 3. Build message text for display
+                var sb = new StringBuilder();
+                sb.AppendLine($"BEST SELLERS REPORT - {DateTime.Now:yyyy-MM-dd}");
+                sb.AppendLine("---------------------------------------");
+
+                int rank = 1;
+                foreach (var item in report.BestSellers)
+                {
+                    sb.AppendLine($"{rank}. {item.ItemName} - {item.TotalQuantitySold} sold");
+                    rank++;
+                }
+
+                MessageBox.Show(
+                    sb.ToString(),
+                    "Top Selling Items",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information
+                );
+            }
+            catch (IOException ex)
+            {
+                MessageBox.Show($"File access error: {ex.Message}", "File Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Unexpected error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+    }
 }
