@@ -3,16 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\I769044\\source\\repos\\TheCozyCup\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DCB4B068-A255-ACEB-D553-F8ED2F496652}|TheCozyCup.csproj|c:\\users\\i769044\\source\\repos\\thecozycup\\fileloggerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DCB4B068-A255-ACEB-D553-F8ED2F496652}|TheCozyCup.csproj|solutionrelative:fileloggerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DCB4B068-A255-ACEB-D553-F8ED2F496652}|TheCozyCup.csproj|c:\\users\\i769044\\source\\repos\\thecozycup\\saleslogentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DCB4B068-A255-ACEB-D553-F8ED2F496652}|TheCozyCup.csproj|solutionrelative:saleslogentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DCB4B068-A255-ACEB-D553-F8ED2F496652}|TheCozyCup.csproj|c:\\users\\i769044\\source\\repos\\thecozycup\\salesreportingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DCB4B068-A255-ACEB-D553-F8ED2F496652}|TheCozyCup.csproj|solutionrelative:salesreportingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DCB4B068-A255-ACEB-D553-F8ED2F496652}|TheCozyCup.csproj|c:\\users\\i769044\\source\\repos\\thecozycup\\menuservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DCB4B068-A255-ACEB-D553-F8ED2F496652}|TheCozyCup.csproj|solutionrelative:menuservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DCB4B068-A255-ACEB-D553-F8ED2F496652}|TheCozyCup.csproj|c:\\users\\i769044\\source\\repos\\thecozycup\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -23,40 +15,48 @@
       "RelativeMoniker": "D:0:0:{DCB4B068-A255-ACEB-D553-F8ED2F496652}|TheCozyCup.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{DCB4B068-A255-ACEB-D553-F8ED2F496652}|TheCozyCup.csproj|c:\\users\\i769044\\source\\repos\\thecozycup\\menuitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DCB4B068-A255-ACEB-D553-F8ED2F496652}|TheCozyCup.csproj|solutionrelative:menuitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{DCB4B068-A255-ACEB-D553-F8ED2F496652}|TheCozyCup.csproj|c:\\users\\i769044\\source\\repos\\thecozycup\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DCB4B068-A255-ACEB-D553-F8ED2F496652}|TheCozyCup.csproj|solutionrelative:order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DCB4B068-A255-ACEB-D553-F8ED2F496652}|TheCozyCup.csproj|c:\\users\\i769044\\source\\repos\\thecozycup\\dailysummaryreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DCB4B068-A255-ACEB-D553-F8ED2F496652}|TheCozyCup.csproj|solutionrelative:dailysummaryreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DCB4B068-A255-ACEB-D553-F8ED2F496652}|TheCozyCup.csproj|c:\\users\\i769044\\source\\repos\\thecozycup\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DCB4B068-A255-ACEB-D553-F8ED2F496652}|TheCozyCup.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DCB4B068-A255-ACEB-D553-F8ED2F496652}|TheCozyCup.csproj|c:\\users\\i769044\\source\\repos\\thecozycup\\orderlineitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DCB4B068-A255-ACEB-D553-F8ED2F496652}|TheCozyCup.csproj|solutionrelative:orderlineitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{DCB4B068-A255-ACEB-D553-F8ED2F496652}|TheCozyCup.csproj|c:\\users\\i769044\\source\\repos\\thecozycup\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DCB4B068-A255-ACEB-D553-F8ED2F496652}|TheCozyCup.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{DCB4B068-A255-ACEB-D553-F8ED2F496652}|TheCozyCup.csproj|c:\\users\\i769044\\source\\repos\\thecozycup\\itransaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DCB4B068-A255-ACEB-D553-F8ED2F496652}|TheCozyCup.csproj|solutionrelative:itransaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DCB4B068-A255-ACEB-D553-F8ED2F496652}|TheCozyCup.csproj|c:\\users\\i769044\\source\\repos\\thecozycup\\fileloggerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DCB4B068-A255-ACEB-D553-F8ED2F496652}|TheCozyCup.csproj|solutionrelative:fileloggerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DCB4B068-A255-ACEB-D553-F8ED2F496652}|TheCozyCup.csproj|c:\\users\\i769044\\source\\repos\\thecozycup\\delegates.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DCB4B068-A255-ACEB-D553-F8ED2F496652}|TheCozyCup.csproj|solutionrelative:delegates.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DCB4B068-A255-ACEB-D553-F8ED2F496652}|TheCozyCup.csproj|c:\\users\\i769044\\source\\repos\\thecozycup\\menuservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DCB4B068-A255-ACEB-D553-F8ED2F496652}|TheCozyCup.csproj|solutionrelative:menuservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DCB4B068-A255-ACEB-D553-F8ED2F496652}|TheCozyCup.csproj|c:\\users\\i769044\\source\\repos\\thecozycup\\dailysummaryreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DCB4B068-A255-ACEB-D553-F8ED2F496652}|TheCozyCup.csproj|solutionrelative:dailysummaryreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DCB4B068-A255-ACEB-D553-F8ED2F496652}|TheCozyCup.csproj|c:\\users\\i769044\\source\\repos\\thecozycup\\saleslogentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DCB4B068-A255-ACEB-D553-F8ED2F496652}|TheCozyCup.csproj|solutionrelative:saleslogentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DCB4B068-A255-ACEB-D553-F8ED2F496652}|TheCozyCup.csproj|c:\\users\\i769044\\source\\repos\\thecozycup\\salesreportingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DCB4B068-A255-ACEB-D553-F8ED2F496652}|TheCozyCup.csproj|solutionrelative:salesreportingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DCB4B068-A255-ACEB-D553-F8ED2F496652}|TheCozyCup.csproj|c:\\users\\i769044\\source\\repos\\thecozycup\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DCB4B068-A255-ACEB-D553-F8ED2F496652}|TheCozyCup.csproj|solutionrelative:form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DCB4B068-A255-ACEB-D553-F8ED2F496652}|TheCozyCup.csproj|c:\\users\\i769044\\source\\repos\\thecozycup\\menuitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DCB4B068-A255-ACEB-D553-F8ED2F496652}|TheCozyCup.csproj|solutionrelative:menuitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DCB4B068-A255-ACEB-D553-F8ED2F496652}|TheCozyCup.csproj|c:\\users\\i769044\\source\\repos\\thecozycup\\form1.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
@@ -70,11 +70,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "C:\\Users\\I769044\\source\\repos\\TheCozyCup\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
@@ -87,98 +87,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\I769044\\source\\repos\\TheCozyCup\\Form1.cs",
-              "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\Users\\I769044\\source\\repos\\TheCozyCup\\Form1.cs",
-              "RelativeToolTip": "Form1.cs",
-              "ViewState": "AgIAAOkAAAAAAAAAAAAgwPMAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-11T22:06:09.27Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "SalesLogEntry.cs",
-              "DocumentMoniker": "C:\\Users\\I769044\\source\\repos\\TheCozyCup\\SalesLogEntry.cs",
-              "RelativeDocumentMoniker": "SalesLogEntry.cs",
-              "ToolTip": "C:\\Users\\I769044\\source\\repos\\TheCozyCup\\SalesLogEntry.cs",
-              "RelativeToolTip": "SalesLogEntry.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-11T22:05:43.895Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "SalesReportingService.cs",
-              "DocumentMoniker": "C:\\Users\\I769044\\source\\repos\\TheCozyCup\\SalesReportingService.cs",
-              "RelativeDocumentMoniker": "SalesReportingService.cs",
-              "ToolTip": "C:\\Users\\I769044\\source\\repos\\TheCozyCup\\SalesReportingService.cs",
-              "RelativeToolTip": "SalesReportingService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADgAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-11T22:08:23.806Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "FileLoggerService.cs",
-              "DocumentMoniker": "C:\\Users\\I769044\\source\\repos\\TheCozyCup\\FileLoggerService.cs",
-              "RelativeDocumentMoniker": "FileLoggerService.cs",
-              "ToolTip": "C:\\Users\\I769044\\source\\repos\\TheCozyCup\\FileLoggerService.cs*",
-              "RelativeToolTip": "FileLoggerService.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADsAAAAAAAAAAAAAAA==",
+              "Title": "MenuService.cs",
+              "DocumentMoniker": "C:\\Users\\I769044\\source\\repos\\TheCozyCup\\MenuService.cs",
+              "RelativeDocumentMoniker": "MenuService.cs",
+              "ToolTip": "C:\\Users\\I769044\\source\\repos\\TheCozyCup\\MenuService.cs*",
+              "RelativeToolTip": "MenuService.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-11T22:02:17.972Z",
+              "WhenOpened": "2025-11-11T22:03:36.99Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "Order.cs",
-              "DocumentMoniker": "C:\\Users\\I769044\\source\\repos\\TheCozyCup\\Order.cs",
-              "RelativeDocumentMoniker": "Order.cs",
-              "ToolTip": "C:\\Users\\I769044\\source\\repos\\TheCozyCup\\Order.cs",
-              "RelativeToolTip": "Order.cs",
-              "ViewState": "AgIAAEAAAAAAAAAAAAAwwFEAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-11T22:04:18.706Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "DailySummaryReport.cs",
-              "DocumentMoniker": "C:\\Users\\I769044\\source\\repos\\TheCozyCup\\DailySummaryReport.cs",
-              "RelativeDocumentMoniker": "DailySummaryReport.cs",
-              "ToolTip": "C:\\Users\\I769044\\source\\repos\\TheCozyCup\\DailySummaryReport.cs",
-              "RelativeToolTip": "DailySummaryReport.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAzwBoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-11T22:07:42.523Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\I769044\\source\\repos\\TheCozyCup\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\I769044\\source\\repos\\TheCozyCup\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T12:42:27.099Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
               "Title": "OrderLineItem.cs",
               "DocumentMoniker": "C:\\Users\\I769044\\source\\repos\\TheCozyCup\\OrderLineItem.cs",
               "RelativeDocumentMoniker": "OrderLineItem.cs",
@@ -191,20 +113,59 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Delegates.cs",
-              "DocumentMoniker": "C:\\Users\\I769044\\source\\repos\\TheCozyCup\\Delegates.cs",
-              "RelativeDocumentMoniker": "Delegates.cs",
-              "ToolTip": "C:\\Users\\I769044\\source\\repos\\TheCozyCup\\Delegates.cs",
-              "RelativeToolTip": "Delegates.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA5AAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "Order.cs",
+              "DocumentMoniker": "C:\\Users\\I769044\\source\\repos\\TheCozyCup\\Order.cs",
+              "RelativeDocumentMoniker": "Order.cs",
+              "ToolTip": "C:\\Users\\I769044\\source\\repos\\TheCozyCup\\Order.cs",
+              "RelativeToolTip": "Order.cs",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAwwFEAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-11T22:01:38.318Z",
+              "WhenOpened": "2025-11-11T22:04:18.706Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 3,
+              "Title": "MenuItem.cs",
+              "DocumentMoniker": "C:\\Users\\I769044\\source\\repos\\TheCozyCup\\MenuItem.cs",
+              "RelativeDocumentMoniker": "MenuItem.cs",
+              "ToolTip": "C:\\Users\\I769044\\source\\repos\\TheCozyCup\\MenuItem.cs",
+              "RelativeToolTip": "MenuItem.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAwAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-11T22:00:35.382Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\I769044\\source\\repos\\TheCozyCup\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "C:\\Users\\I769044\\source\\repos\\TheCozyCup\\Form1.cs",
+              "RelativeToolTip": "Form1.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAewBkAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-11T22:06:09.27Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\I769044\\source\\repos\\TheCozyCup\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\I769044\\source\\repos\\TheCozyCup\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-12T12:42:27.099Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "ITransaction.cs",
               "DocumentMoniker": "C:\\Users\\I769044\\source\\repos\\TheCozyCup\\ITransaction.cs",
               "RelativeDocumentMoniker": "ITransaction.cs",
@@ -217,20 +178,70 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "MenuService.cs",
-              "DocumentMoniker": "C:\\Users\\I769044\\source\\repos\\TheCozyCup\\MenuService.cs",
-              "RelativeDocumentMoniker": "MenuService.cs",
-              "ToolTip": "C:\\Users\\I769044\\source\\repos\\TheCozyCup\\MenuService.cs",
-              "RelativeToolTip": "MenuService.cs",
-              "ViewState": "AgIAADcAAAAAAAAAAAAAwHUAAAAgAAAAAAAAAA==",
+              "DocumentIndex": 8,
+              "Title": "FileLoggerService.cs",
+              "DocumentMoniker": "C:\\Users\\I769044\\source\\repos\\TheCozyCup\\FileLoggerService.cs",
+              "RelativeDocumentMoniker": "FileLoggerService.cs",
+              "ToolTip": "C:\\Users\\I769044\\source\\repos\\TheCozyCup\\FileLoggerService.cs",
+              "RelativeToolTip": "FileLoggerService.cs",
+              "ViewState": "AgIAADEAAAAAAAAAAAAkwDsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-11T22:03:36.99Z",
+              "WhenOpened": "2025-11-11T22:02:17.972Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Delegates.cs",
+              "DocumentMoniker": "C:\\Users\\I769044\\source\\repos\\TheCozyCup\\Delegates.cs",
+              "RelativeDocumentMoniker": "Delegates.cs",
+              "ToolTip": "C:\\Users\\I769044\\source\\repos\\TheCozyCup\\Delegates.cs",
+              "RelativeToolTip": "Delegates.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-11T22:01:38.318Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "DailySummaryReport.cs",
+              "DocumentMoniker": "C:\\Users\\I769044\\source\\repos\\TheCozyCup\\DailySummaryReport.cs",
+              "RelativeDocumentMoniker": "DailySummaryReport.cs",
+              "ToolTip": "C:\\Users\\I769044\\source\\repos\\TheCozyCup\\DailySummaryReport.cs",
+              "RelativeToolTip": "DailySummaryReport.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-11T22:07:42.523Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
+              "Title": "SalesReportingService.cs",
+              "DocumentMoniker": "C:\\Users\\I769044\\source\\repos\\TheCozyCup\\SalesReportingService.cs",
+              "RelativeDocumentMoniker": "SalesReportingService.cs",
+              "ToolTip": "C:\\Users\\I769044\\source\\repos\\TheCozyCup\\SalesReportingService.cs",
+              "RelativeToolTip": "SalesReportingService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-11T22:08:23.806Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "SalesLogEntry.cs",
+              "DocumentMoniker": "C:\\Users\\I769044\\source\\repos\\TheCozyCup\\SalesLogEntry.cs",
+              "RelativeDocumentMoniker": "SalesLogEntry.cs",
+              "ToolTip": "C:\\Users\\I769044\\source\\repos\\TheCozyCup\\SalesLogEntry.cs",
+              "RelativeToolTip": "SalesLogEntry.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-11T22:05:43.895Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "Form1.Designer.cs",
               "DocumentMoniker": "C:\\Users\\I769044\\source\\repos\\TheCozyCup\\Form1.Designer.cs",
               "RelativeDocumentMoniker": "Form1.Designer.cs",
@@ -239,19 +250,6 @@
               "ViewState": "AgIAACgAAAAAAAAAAAD4vzYAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-11T22:00:21.374Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "MenuItem.cs",
-              "DocumentMoniker": "C:\\Users\\I769044\\source\\repos\\TheCozyCup\\MenuItem.cs",
-              "RelativeDocumentMoniker": "MenuItem.cs",
-              "ToolTip": "C:\\Users\\I769044\\source\\repos\\TheCozyCup\\MenuItem.cs",
-              "RelativeToolTip": "MenuItem.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABEAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-11T22:00:35.382Z",
               "EditorCaption": ""
             },
             {
