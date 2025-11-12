@@ -113,7 +113,7 @@ namespace TheCozyCup
             return total;
         }
 
-        decimal CalculateFinalTotal()
+        public decimal CalculateFinalTotal()
         {
             decimal subTotal = GetSubTotal();
             decimal discountAmount = subTotal * (DiscountPercentage / 100);
@@ -146,7 +146,7 @@ namespace TheCozyCup
             OnOrderUpdated();
         }
 
-        private void OnOrderUpdated()
+        public void OnOrderUpdated()
         {
             // calculate the total before invoking the event
             decimal newTotal = CalculateFinalTotal();
