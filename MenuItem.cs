@@ -5,6 +5,7 @@ using System.Text;
 
 namespace TheCozyCup
 {
+
     public class MenuItem
     {
         public event StateChangedEventHandler MenuItemChanged;

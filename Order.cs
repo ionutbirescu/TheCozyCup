@@ -7,7 +7,7 @@ namespace TheCozyCup
 {
     public class Order : ITransaction
     {
-        public event OrderUpdatedEventHandler? OrderUpdated;
+        public event OrderUpdatedEventHandler OrderUpdated;
         public Guid orderId { get; set; }
         public List<OrderLineItem> lineItems { get; set; }
         public DateTime orderDate { get; set; }

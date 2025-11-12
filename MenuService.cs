@@ -7,12 +7,13 @@ using TheCozyCup;
 
 namespace TheCozyCup
 {
-    internal class MenuService
+    
+    public class MenuService
     {
         private const string MenuFilePath = "menu.json";
         private static readonly MenuService ins = new MenuService();
         public event StateChangedEventHandler MenuChanged;
-        private List<MenuItem> menuItems = new List<MenuItem>();
+        public List<MenuItem> menuItems = new List<MenuItem>();
         private MenuService()
         {
             if (!LoadMenuFile())
