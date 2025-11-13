@@ -1,8 +1,5 @@
-﻿using System;
-using System.Threading.Tasks;
-
-namespace TheCozyCup
-{ 
+﻿namespace TheCozyCup
+{
     // A general-purpose delegate for state changes (e.g., MenuItem price changed, OrderLineItem quantity changed).
     public delegate void StateChangedEventHandler(object sender, EventArgs e);
     // Specific delegate for Order changes, explicitly carrying the important new total amount.

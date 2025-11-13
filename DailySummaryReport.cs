@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace TheCozyCup
+﻿namespace TheCozyCup
 {
     // Represents the aggregated financial and product data for a given period (e.g., a day).
     public class DailySummaryReport

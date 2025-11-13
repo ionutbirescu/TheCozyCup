@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
-namespace TheCozyCup
+﻿namespace TheCozyCup
 {
     //Implemented as a Singleton for easy access to reporting functionality.
     public class SalesReportingService
@@ -15,7 +11,7 @@ namespace TheCozyCup
         {
             var report = new DailySummaryReport
             {
-                ReportDate = DateTime.Today 
+                ReportDate = DateTime.Today
             };
 
             if (allSales == null || !allSales.Any())
@@ -40,14 +36,14 @@ namespace TheCozyCup
             }
 
             var bestSellersGroup = allItemsSoldTemp
-                .GroupBy(item => item.Key) 
+                .GroupBy(item => item.Key)
                 .Select(group => new DailySummaryReport.PopularItem
                 {
                     ItemName = group.Key,
                     TotalQuantitySold = group.Sum(item => item.Value)
                 })
-                .OrderByDescending(item => item.TotalQuantitySold) 
-                .Take(3); 
+                .OrderByDescending(item => item.TotalQuantitySold)
+                .Take(3);
 
             report.BestSellers = bestSellersGroup.ToList();
 

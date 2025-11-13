@@ -252,10 +252,17 @@ namespace TheCozyCup
                     DataSource = displayData
                 };
 
+                dgv.DataSource = displayData;
+
+                // Now the columns exist, you can adjust
+                dgv.Columns["orderID"].Width = 120;
+                dgv.Columns["SaleDate"].Width = 150;
+                dgv.Columns["Customer"].Width = 200;
+                dgv.Columns["TotalAmount"].Width = 120;
+                dgv.Columns["ItemsSold"].Width = 300;
+
                 reportForm.Controls.Add(dgv);
                 reportForm.Controls.Add(summaryLabel);
-
-                dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
 
                 reportForm.ShowDialog();
             }
@@ -278,6 +285,8 @@ namespace TheCozyCup
                 );
             }
         }
+
+
 
 
         private async void BestSellers_Click(object sender, EventArgs e)
@@ -332,47 +341,6 @@ namespace TheCozyCup
         private void NewOrder_Click(object sender, EventArgs e)
         {
             ResetOrderUI();
-        }
-
-        private void RemoveItem_Click(object sender, EventArgs e)
-        {
-            if (listView1.SelectedItems.Count == 0)
-            {
-                MessageBox.Show("Please select an item to remove.", "No Selection", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            try
-            {
-                // Assuming each row corresponds to a MenuItem's Name
-                var selectedItem = listView1.SelectedItems[0];
-                string itemName = selectedItem.Text;
-
-                // Find the MenuItem in the current order
-                var lineItem = _currentOrder.lineItems.FirstOrDefault(li => li.Item.Name == itemName);
-                if (lineItem != null)
-                {
-                    _currentOrder.RemoveMenuItem(lineItem.Item.Id);
-
-                    // Remove from the ListView
-                    listView1.Items.Remove(selectedItem);
-
-                    // Update total
-                    textBox1.Text = _currentOrder.CalculateFinalTotal().ToString("C");
-                }
-                else
-                {
-                    MessageBox.Show("Item not found in the current order.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-            catch (InvalidOperationException ex)
-            {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Unexpected error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
         }
     }
 }

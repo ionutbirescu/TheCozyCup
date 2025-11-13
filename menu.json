@@ -1,0 +1,32 @@
+﻿[
+  {
+    "Name": "Espresso",
+    "Price": 2.50,
+    "Category": "Beverage",
+    "Description": "Strong and bold espresso shot."
+  },
+  {
+    "Name": "Cappuccino",
+    "Price": 3.50,
+    "Category": "Beverage",
+    "Description": "Espresso with steamed milk and foam."
+  },
+  {
+    "Name": "Latte",
+    "Price": 4.00,
+    "Category": "Beverage",
+    "Description": "Espresso with steamed milk."
+  },
+  {
+    "Name": "Blueberry Muffin",
+    "Price": 2.00,
+    "Category": "Pastry",
+    "Description": "Freshly baked muffin with blueberries."
+  },
+  {
+    "Name": "Bagel with Cream Cheese",
+    "Price": 2.50,
+    "Category": "Pastry",
+    "Description": "Toasted bagel served with cream cheese."
+  }
+]

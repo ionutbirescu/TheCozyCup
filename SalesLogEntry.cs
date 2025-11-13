@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace TheCozyCup
+﻿namespace TheCozyCup
 {
     public class SalesLogEntry
     {
@@ -30,6 +26,16 @@ namespace TheCozyCup
             this.ItemsSold = order.lineItems.ToDictionary(li => li.Item.Name, li => li.Quantity);
         }
 
+        public override string ToString()
+        {
+            // Provide a string representation for the SalesLogEntry object.
+            // This ensures all code paths return a value, fixing CS0161.
+            // Example format: OrderID, SaleDate, Subtotal, Discount, FinalTotal, ItemsSold
+            var items = ItemsSold != null
+                ? string.Join(", ", ItemsSold.Select(kvp => $"{kvp.Key}: {kvp.Value}"))
+                : "None";
+            return $"OrderID: {orderID}, SaleDate: {saleDate}, Subtotal: {Subtotal:C}, Discount: {DiscountPercentage:P}, FinalTotal: {FinalTotal:C}, ItemsSold: [{items}]";
+        }
 
     }
 }

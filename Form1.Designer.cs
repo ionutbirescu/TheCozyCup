@@ -1,4 +1,6 @@
-﻿namespace TheCozyCup
+﻿
+
+namespace TheCozyCup
 {
     partial class Form1
     {
@@ -30,21 +32,21 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             FinalizeSale = new Button();
-            BestSellers = new Button();
             Discount = new Button();
             Reports = new Button();
             MenuButtons = new Panel();
+            NewOrder = new Button();
             Total = new Label();
             flowLayoutPanel1 = new FlowLayoutPanel();
             listView1 = new ListView();
-            label1 = new Label();
             textBox1 = new TextBox();
+            RemoveItem = new Button();
             MenuButtons.SuspendLayout();
             SuspendLayout();
             // 
             // FinalizeSale
             // 
-            FinalizeSale.Location = new Point(71, 279);
+            FinalizeSale.Location = new Point(74, 282);
             FinalizeSale.Margin = new Padding(4);
             FinalizeSale.Name = "FinalizeSale";
             FinalizeSale.RightToLeft = RightToLeft.Yes;
@@ -54,23 +56,12 @@
             FinalizeSale.UseVisualStyleBackColor = true;
             FinalizeSale.Click += FinalizeSale_Click;
             // 
-            // BestSellers
-            // 
-            BestSellers.Location = new Point(74, 220);
-            BestSellers.Margin = new Padding(4);
-            BestSellers.Name = "BestSellers";
-            BestSellers.Size = new Size(242, 36);
-            BestSellers.TabIndex = 1;
-            BestSellers.Text = "BEST SELLERS";
-            BestSellers.UseVisualStyleBackColor = true;
-            BestSellers.Click += BestSellers_Click;
-            // 
             // Discount
             // 
-            Discount.Location = new Point(74, 148);
+            Discount.Location = new Point(74, 112);
             Discount.Margin = new Padding(4);
             Discount.Name = "Discount";
-            Discount.Size = new Size(245, 48);
+            Discount.Size = new Size(245, 58);
             Discount.TabIndex = 2;
             Discount.Text = "DISCOUNT";
             Discount.UseVisualStyleBackColor = true;
@@ -78,10 +69,10 @@
             // 
             // Reports
             // 
-            Reports.Location = new Point(81, 73);
+            Reports.Location = new Point(300, 488);
             Reports.Margin = new Padding(4);
             Reports.Name = "Reports";
-            Reports.Size = new Size(235, 44);
+            Reports.Size = new Size(281, 52);
             Reports.TabIndex = 3;
             Reports.Text = "REPORTS";
             Reports.UseVisualStyleBackColor = true;
@@ -89,16 +80,26 @@
             // 
             // MenuButtons
             // 
-            MenuButtons.Controls.Add(Reports);
+            MenuButtons.Controls.Add(RemoveItem);
+            MenuButtons.Controls.Add(NewOrder);
             MenuButtons.Controls.Add(Discount);
-            MenuButtons.Controls.Add(BestSellers);
             MenuButtons.Controls.Add(FinalizeSale);
             MenuButtons.Location = new Point(1159, 268);
             MenuButtons.Margin = new Padding(4);
             MenuButtons.Name = "MenuButtons";
-            MenuButtons.Size = new Size(449, 374);
+            MenuButtons.Size = new Size(397, 374);
             MenuButtons.TabIndex = 7;
             MenuButtons.Paint += MenuButtons_Paint;
+            // 
+            // NewOrder
+            // 
+            NewOrder.Location = new Point(72, 201);
+            NewOrder.Name = "NewOrder";
+            NewOrder.Size = new Size(247, 55);
+            NewOrder.TabIndex = 4;
+            NewOrder.Text = "NEW ORDER";
+            NewOrder.UseVisualStyleBackColor = true;
+            NewOrder.Click += NewOrder_Click;
             // 
             // Total
             // 
@@ -129,15 +130,6 @@
             listView1.UseCompatibleStateImageBehavior = false;
             listView1.SelectedIndexChanged += listView1_SelectedIndexChanged;
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(1667, 752);
-            label1.Name = "label1";
-            label1.Size = new Size(59, 25);
-            label1.TabIndex = 10;
-            label1.Text = "label1";
-            // 
             // textBox1
             // 
             textBox1.Font = new Font("Segoe UI", 18F);
@@ -146,6 +138,16 @@
             textBox1.Size = new Size(253, 55);
             textBox1.TabIndex = 12;
             // 
+            // RemoveItem
+            // 
+            RemoveItem.Location = new Point(72, 28);
+            RemoveItem.Name = "RemoveItem";
+            RemoveItem.Size = new Size(247, 53);
+            RemoveItem.TabIndex = 13;
+            RemoveItem.Text = "REMOVE";
+            RemoveItem.UseVisualStyleBackColor = true;
+            RemoveItem.Click += RemoveItem_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -153,7 +155,7 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(1924, 1170);
             Controls.Add(textBox1);
-            Controls.Add(label1);
+            Controls.Add(Reports);
             Controls.Add(listView1);
             Controls.Add(flowLayoutPanel1);
             Controls.Add(MenuButtons);
@@ -167,17 +169,18 @@
             PerformLayout();
         }
 
+
         #endregion
 
         private Button FinalizeSale;
-        private Button BestSellers;
         private Button Discount;
         private Button Reports;
         private Panel MenuButtons;
         private Label Total;
         private FlowLayoutPanel flowLayoutPanel1;
         private ListView listView1;
-        private Label label1;
         private TextBox textBox1;
+        private Button NewOrder;
+        private Button RemoveItem;
     }
 }

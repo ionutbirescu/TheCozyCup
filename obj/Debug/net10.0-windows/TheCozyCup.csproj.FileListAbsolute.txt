@@ -16,3 +16,4 @@ C:\Users\I769044\source\repos\TheCozyCup\obj\Debug\net10.0-windows\refint\TheCoz
 C:\Users\I769044\source\repos\TheCozyCup\obj\Debug\net10.0-windows\TheCozyCup.pdb
 C:\Users\I769044\source\repos\TheCozyCup\obj\Debug\net10.0-windows\TheCozyCup.genruntimeconfig.cache
 C:\Users\I769044\source\repos\TheCozyCup\obj\Debug\net10.0-windows\ref\TheCozyCup.dll
+C:\Users\I769044\source\repos\TheCozyCup\bin\Debug\net10.0-windows\menu.json

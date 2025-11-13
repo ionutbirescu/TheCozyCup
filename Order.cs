@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Security.Policy;
-using System.Text;
-
-namespace TheCozyCup
+﻿namespace TheCozyCup
 {
     public class Order : ITransaction
     {
@@ -157,5 +152,9 @@ namespace TheCozyCup
             OrderUpdated?.Invoke(this, newTotal);
         }
         
+        public override string ToString()
+        {
+            return $"Order ID: {orderId}, Date: {orderDate}, Items: {lineItems.Count}, Final Total: {FinalTotal:C}, Finalized: {IsFinalized}";
+        }
     }
 }
