@@ -1,2 +1,2 @@
 # TheCozyCup
-C# For a Coffee Shop
+C# App for managing sales for a Coffee Shop
