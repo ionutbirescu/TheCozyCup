@@ -8,6 +8,8 @@ namespace TheCozyCup
         public Form1()
         {
             InitializeComponent();
+            this.BackgroundImage = Image.FromFile("C:\\Users\\I769044\\source\\repos\\TheCozyCup\\pixel_art.jpg");
+            this.BackgroundImageLayout = ImageLayout.Stretch;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -16,8 +18,9 @@ namespace TheCozyCup
             ResetOrderUI();
             listView1.Columns.Clear();
 
-            listView1.Columns.Add("Item Name", 150, HorizontalAlignment.Left);
-            listView1.Columns.Add("Price", 70, HorizontalAlignment.Right);
+            listView1.Columns.Add("Item Name", 400, HorizontalAlignment.Left);
+            listView1.Columns.Add("Price", 100, HorizontalAlignment.Right);
+            listView1.Columns.Add("Quantity", 100, HorizontalAlignment.Right);
             flowLayoutPanel1.Controls.Clear();
             MenuService menuService = MenuService.Instance;
             var items = menuService.GetAllItems();
@@ -40,18 +43,45 @@ namespace TheCozyCup
 
                 Button btn = new Button();
                 btn.Text = item.Name;
-                btn.Width = 120;
-                btn.Height = 40;
+                btn.Width = 140;
+                btn.Height = 80;
                 btn.Tag = item;
 
                 btn.Click += (s, ev) =>
                 {
-
                     MenuItem clickedItem = (MenuItem)((Button)s).Tag;
-                    listView1.Items.Add(new ListViewItem(new string[] { clickedItem.Name, clickedItem.Price.ToString("C") }));
+
+                    // Add or update in the order
                     _currentOrder.AddMenuItem(clickedItem, 1);
+
+                    // Check if the item is already in the ListView
+                    var existingListViewItem = listView1.Items
+                        .Cast<ListViewItem>()
+                        .FirstOrDefault(lvi => lvi.Text == clickedItem.Name);
+
+                    if (existingListViewItem != null)
+                    {
+                        // Update quantity and price
+                        var lineItem = _currentOrder.lineItems.First(li => li.Item.Id == clickedItem.Id);
+                        existingListViewItem.SubItems[1].Text = clickedItem.Price.ToString("C"); // Price per unit
+                        existingListViewItem.SubItems[2].Text = lineItem.Quantity.ToString();    // Quantity
+                    }
+                    else
+                    {
+                        // Add new row
+                        var lineItem = _currentOrder.lineItems.First(li => li.Item.Id == clickedItem.Id);
+                        listView1.Items.Add(new ListViewItem(new string[]
+                        {
+                            clickedItem.Name,
+                            clickedItem.Price.ToString("C"),
+                            lineItem.Quantity.ToString()
+                        }));
+                    }
+
+                    // Update total
                     textBox1.Text = _currentOrder.CalculateFinalTotal().ToString("C");
                 };
+
                 flowLayoutPanel1.Controls.Add(btn);
 
             }
@@ -280,7 +310,7 @@ namespace TheCozyCup
         }
 
 
-        private async void BestSellers_Click(object sender, EventArgs e)
+        /*private async void BestSellers_Click(object sender, EventArgs e)
         {
             try
             {
@@ -327,7 +357,7 @@ namespace TheCozyCup
             {
                 MessageBox.Show($"Unexpected error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
+        }*/
 
         private void NewOrder_Click(object sender, EventArgs e)
         {
@@ -374,5 +404,44 @@ namespace TheCozyCup
                 MessageBox.Show($"Unexpected error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void DecreaseQuantity_Click(object sender, EventArgs e)
+        {
+            if (listView1.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("Please select an item to decrease.", "No Selection",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            var selectedItem = listView1.SelectedItems[0];
+            string itemName = selectedItem.Text;
+
+            // Find backend line item
+            var lineItem = _currentOrder.lineItems
+                .FirstOrDefault(li => li.Item.Name == itemName);
+
+            if (lineItem == null)
+                return;
+
+            // Decrease quantity internally
+            lineItem.DecreaseQuantity(1);
+
+            // ✔ Remove from ListView if quantity is now 0
+            if (lineItem.Quantity == 0)
+            {
+                listView1.Items.Remove(selectedItem);
+            }
+            else
+            {
+                // Otherwise update quantity
+                selectedItem.SubItems[2].Text = lineItem.Quantity.ToString();
+            }
+
+            // Update total display
+            textBox1.Text = _currentOrder.CalculateFinalTotal().ToString("C");
+        }
+
+
     }
 }

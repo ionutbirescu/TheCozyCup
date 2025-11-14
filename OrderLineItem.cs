@@ -35,16 +35,20 @@
 
         public void DecreaseQuantity(int amount)
         {
-            if (amount <= 0)
+            if (amount < 0)
             {
                 throw new ArgumentException("Decrease amount must be greater than zero.");
             }
-            if (Quantity - amount <= 0)
-            {
-                throw new ArgumentException("Quantity cannot be less than or equal to zero.");
-            }
             Quantity -= amount;
-            OnOrderLineItemChanged();
+            if (Quantity <= 0)
+            {
+                Quantity = 0;
+                OnOrderLineItemRemoved();   
+            }
+            else
+            {
+                OnOrderLineItemChanged();    
+            }
         }
 
         private void OnOrderLineItemChanged()

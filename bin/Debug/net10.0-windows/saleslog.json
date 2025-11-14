@@ -26,3 +26,6 @@
 {"orderID":"4cb5b81a-8552-48b1-be8d-b7441153a961","saleDate":"2025-11-13T14:14:56.2241144+02:00","Subtotal":6.00,"DiscountPercentage":15,"FinalTotal":5.1000,"ItemsSold":{"Cappuccino":1,"Espresso":1}}
 {"orderID":"9c1ec259-a5d3-48e6-a10f-7e31d15bd2b6","saleDate":"2025-11-13T14:34:44.4309479+02:00","Subtotal":6.00,"DiscountPercentage":0,"FinalTotal":6.00,"ItemsSold":{"Cappuccino":1,"Bagel with Cream Cheese":1}}
 {"orderID":"cf45fb17-7523-4db6-8177-84a935c197ce","saleDate":"2025-11-13T14:36:26.7253845+02:00","Subtotal":2.00,"DiscountPercentage":0,"FinalTotal":2.00,"ItemsSold":{"Blueberry Muffin":1}}
+{"orderID":"2ed11acc-e81a-48d1-8dda-2c87baed312c","saleDate":"2025-11-13T15:50:27.6260639+02:00","Subtotal":7.00,"DiscountPercentage":0,"FinalTotal":7.00,"ItemsSold":{"Espresso":1,"Blueberry Muffin":1,"Bagel with Cream Cheese":1}}
+{"orderID":"6de7ce25-b744-4f1e-8f71-748e099d44be","saleDate":"2025-11-14T14:41:56.7818775+02:00","Subtotal":26.50,"DiscountPercentage":0,"FinalTotal":26.50,"ItemsSold":{"Espresso":3,"Cappuccino":2,"Latte":2,"Blueberry Muffin":2}}
+{"orderID":"4e1c1732-6249-435f-b104-6c1286828855","saleDate":"2025-11-14T14:56:57.7429796+02:00","Subtotal":4.00,"DiscountPercentage":0,"FinalTotal":4.00,"ItemsSold":{"Bagel with Cream Cheese":0,"Latte":1}}
